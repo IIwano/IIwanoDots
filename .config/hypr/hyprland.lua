@@ -72,6 +72,34 @@ hl.window_rule({
   suppress_event = "maximize",
 })
 
+-- pavucontrol flotante y centrado
+hl.window_rule({
+  name = "pavucontrol-float",
+  match = { class = "org.pulseaudio.pavucontrol" },
+  float = true,
+  size = "500 400",
+  center = true,
+})
+
+-- Diálogos de archivos (abrir/guardar) flotantes
+hl.window_rule({
+  name = "file-dialogs-float",
+  match = { title = "Open File|Save File|Select file|Abrir archivo|Guardar archivo|Seleccionar archivo" },
+  float = true,
+  size = "800 550",
+  center = true,
+})
+
+-- Picture-in-Picture de Brave: flotante, fijo encima, esquina inferior derecha
+hl.window_rule({
+  name = "brave-pip",
+  match = { title = "Picture in picture|Picture-in-Picture" },
+  float = true,
+  pin = true,
+  size = "420 260",
+  move = "98%-w 98%-h",
+})
+
 -- Curvas de movimiento
 hl.curve("smooth",    { type = "bezier", points = { {0.25, 0.10}, {0.25, 1.00} } })
 hl.curve("soft",      { type = "bezier", points = { {0.40, 0.00}, {0.20, 1.00} } })
