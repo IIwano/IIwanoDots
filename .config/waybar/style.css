@@ -1,0 +1,41 @@
+@import "colors.css";
+
+window#waybar {
+  background-color: alpha(@background, 0.75);
+  color: @foreground;
+  border-radius: 1px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 13px;
+}
+
+#workspaces, #clock, #cpu, #memory, #network, #pulseaudio, #custom-gpu, #language, #tray, #mpris {
+  font-family: "JetBrainsMono Nerd Font";
+}
+
+#clock, #cpu, #memory, #network, #pulseaudio, #custom-gpu, #language, #mpris {
+  background-color: shade(@background, 1.5);
+  border-radius: 1px;
+  padding: 0 8px;
+  margin: 3px 2px;
+}
+
+#workspaces {
+  background-color: shade(@background, 1.5);
+  border-radius: 1px;
+  padding: 0 6px;
+  margin: 3px 2px;
+}
+
+#tray {
+  background-color: shade(@background, 1.5);
+  border-radius: 1px;
+  padding: 0 8px;
+  margin: 3px 2px;
+}
+
+#workspaces button.active {
+  background-color: @primary;
+  color: @background;
+  border-radius: 1px;
+  padding: 0 8px;
+}

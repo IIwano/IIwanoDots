@@ -1,0 +1,80 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 28,
+  "margin-top": 0,
+  "spacing": 10,
+  "modules-left": ["hyprland/workspaces", "pulseaudio", "memory"],
+  "modules-center": ["mpris", "clock", "tray"],
+  "modules-right": ["custom/gpu", "cpu", "network", "hyprland/language"],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "イ",
+      "2": "ロ",
+      "3": "ハ",
+      "4": "ニ",
+      "5": "ホ",
+      "6": "ヘ",
+      "7": "ト",
+      "8": "チ",
+      "9": "リ"
+    },
+    "on-click": "activate"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%  {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " mute",
+    "format-muted": " mute",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "scroll-step": 2,
+    "on-click": "pavucontrol"
+  },
+
+  "memory": {
+    "format": " {percentage}%"
+  },
+
+  "mpris": {
+    "format": "{player_icon} {title} - {artist}",
+    "format-paused": "{player_icon} {title} - {artist}",
+    "player-icons": { "default": "" },
+    "max-length": 35
+  },
+
+  "clock": {
+    "format": " {:%H:%M   %d/%m/%Y}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
+  },
+
+  "tray": {
+    "spacing": 10
+  },
+
+  "custom/gpu": {
+    "exec": "~/.config/waybar/scripts/gpu-usage.sh",
+    "interval": 2,
+    "format": " {}%",
+    "tooltip": false
+  },
+
+  "cpu": {
+    "format": " {usage}%"
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": " Conectado",
+    "format-disconnected": " Sin red",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
+  },
+
+  "hyprland/language": {
+    "format": " {short}"
+  }
+}

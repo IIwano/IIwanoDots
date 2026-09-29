@@ -1,0 +1,65 @@
+@import "colors.rasi"
+
+configuration {
+  modi: "drun,search:~/.config/rofi/scripts/websearch.sh";
+  show-icons: true;
+  font: "JetBrainsMono Nerd Font 12";
+  only-match: false;
+  kb-mode-next: "Tab";
+  kb-element-next: "";
+}
+
+window {
+  background-color: @background;
+  border: 2px;
+  border-color: @primary;
+  border-radius: 1px;
+  width: 600px;
+}
+
+mainbox {
+  background-color: @background;
+  padding: 10px;
+}
+
+inputbar {
+  background-color: @background;
+  text-color: @foreground;
+  border: 2px;
+  border-color: @primary;
+  border-radius: 1px;
+  padding: 8px;
+  margin: 0 0 10px 0;
+}
+
+listview {
+  background-color: @background;
+  columns: 2;
+  lines: 8;
+}
+
+element {
+  background-color: @background;
+  text-color: @foreground;
+  border: 1px;
+  border-color: @primary;
+  border-radius: 1px;
+  padding: 6px;
+  margin: 2px;
+}
+
+element normal.normal {
+  background-color: @background;
+  text-color: @foreground;
+}
+
+element alternate.normal {
+  background-color: @background;
+  text-color: @foreground;
+}
+
+element selected {
+  background-color: @primary;
+  text-color: @background;
+  border-color: @primary;
+}
